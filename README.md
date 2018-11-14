@@ -5,6 +5,11 @@ Set of different tools around jupyter to run notebooks in docker.
 * python3.
 * [jupyter](http://jupyter.org) to run notebooks.
 
+## run
+To start notebook simply run:
+```
+docker run -it -p 8888:8888 vistrcm/jupyter-docker
+```
 ## working directory
 /notebooks is default working directory
 
