@@ -12,8 +12,10 @@ RUN groupadd -g 1000 notebook && useradd -u 1000 -d /notebooks -m -g notebook no
         python3-pip \
     && rm -rf /var/lib/apt/lists/* \
     # install dependencies 
-    && pip3 install --no-cache-dir -U \
-        jupyter
+    && python3 -m pip install --no-cache-dir --upgrade pip \
+    && python3 -m pip install --no-cache-dir -U \
+        jupyter \
+        jupyterlab
 
 COPY docker-entrypoint.sh /usr/bin/
 
