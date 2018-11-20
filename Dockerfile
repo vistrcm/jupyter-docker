@@ -17,8 +17,12 @@ RUN groupadd -g 1000 notebook && useradd -u 1000 -d /notebooks -m -g notebook no
     # install dependencies 
     && python3 -m pip install --no-cache-dir --upgrade pip \
     && python3 -m pip install --no-cache-dir -U \
+        pipenv \
         jupyter \
-        jupyterlab
+        jupyterlab \
+        requests \
+        pandas \
+        matplotlib
 
 COPY docker-entrypoint.sh /usr/bin/
 
