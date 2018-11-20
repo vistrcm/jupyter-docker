@@ -7,9 +7,12 @@ RUN groupadd -g 1000 notebook && useradd -u 1000 -d /notebooks -m -g notebook no
     && apt-get update \
     && apt-get upgrade -y \
     && apt-get install -y --no-install-recommends  \
+        # required python packages
         python3 \
         python3-setuptools \
         python3-pip \
+        # other usefull tools
+        git \
     && rm -rf /var/lib/apt/lists/* \
     # install dependencies 
     && python3 -m pip install --no-cache-dir --upgrade pip \
