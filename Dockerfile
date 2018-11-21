@@ -20,9 +20,12 @@ RUN groupadd -g 1000 notebook && useradd -u 1000 -d /notebooks -m -g notebook no
         pipenv \
         jupyter \
         jupyterlab \
+        ipyparallel \
         requests \
         pandas \
-        matplotlib
+        matplotlib \
+    # enable extentions
+    && ipcluster nbextension enable
 
 COPY docker-entrypoint.sh /usr/bin/
 
