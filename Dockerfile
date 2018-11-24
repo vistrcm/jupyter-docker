@@ -1,5 +1,7 @@
 FROM ubuntu:18.10
 
+ENV LC_ALL=C.UTF-8
+ENV LANG=C.UTF-8
 ENV NOTEBOOK_PASSWORD=sha1:b9238c3cd292:8ac1417c199ae4a9eaa33ad5f7b2678c937a3be6
 
 # install required tools
