@@ -25,7 +25,13 @@ RUN groupadd -g 1000 notebook && useradd -u 1000 -d /notebooks -m -g notebook no
         ipyparallel \
         requests \
         pandas \
+        numpy \
+        scipy \
+        statsmodels \
+        scikit-learn \
+        tensorflow \
         matplotlib \
+        seaborn \
     # enable extentions
     && ipcluster nbextension enable
 
