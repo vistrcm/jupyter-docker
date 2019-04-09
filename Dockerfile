@@ -15,6 +15,7 @@ RUN groupadd -g 1000 notebook && useradd -u 1000 -d /notebooks -m -g notebook no
         python3-pip \
         # other usefull tools
         git \
+        ssh \
     && rm -rf /var/lib/apt/lists/* \
     # install dependencies 
     && python3 -m pip install --no-cache-dir --upgrade pip \
