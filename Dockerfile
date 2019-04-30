@@ -34,6 +34,7 @@ RUN groupadd -g 1000 notebook && useradd -u 1000 -d /notebooks -m -g notebook no
         matplotlib \
         seaborn \
         networkx \
+        google-cloud-bigquery \
     # enable extentions
     && ipcluster nbextension enable
 
